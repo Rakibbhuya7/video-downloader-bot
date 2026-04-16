@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: '3.10' # এখানে ৩.৯ এর বদলে ৩.১০ করে দেওয়া হয়েছে
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -26,5 +26,4 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
-          PYROGRAM_LIMIT: 100
         run: python bot.py
